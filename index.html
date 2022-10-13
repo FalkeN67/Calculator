@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <table class="calculator">
+        <tr>
+            <td class="pole_wyniku" colspan="4">
+                <div id="nieaktywna_div"></div>
+                <div id="wynik_div"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="pola" id="pole0">
+                <div>%</div>
+            </td>
+            <td class="pola" id="pole1">
+                <div>C</div>
+            </td>
+            <td class="pola" id="pole2">
+                <div>←</div>
+            </td>
+            <td class="pola" id="pole3">
+                <div>/</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="pola" id="pole4" onclick="zpole4()">
+                <div>7</div>
+            </td>
+            <td class="pola" id="pole5" onclick="zpole5()">
+                <div>8</div>
+            </td>
+            <td class="pola" id="pole6" onclick="zpole6()">
+                <div>9</div>
+            </td>
+            <td class="pola" id="pole7" onclick="zpole7()">
+                <div>*</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="pola" id="pole8" onclick="zpole8()">
+                <div>4</div>
+            </td>
+            <td class="pola" id="pole9" onclick="zpole9()">
+                <div>5</div>
+            </td>
+            <td class="pola" id="pole10" onclick="zpole10()">
+                <div>6</div>
+            </td>
+            <td class="pola" id="pole11" onclick="zpole11()">
+                <div>-</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="pola" id="pole12" onclick="zpole12()">
+                <div>1</div>
+            </td>
+            <td class="pola" id="pole13" onclick="zpole13()">
+                <div>2</div>
+            </td>
+            <td class="pola" id="pole14" onclick="zpole14()">
+                <div>3</div>
+            </td>
+            <td class="pola" id="pole15" onclick="zpole15()">
+                <div>+</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="pola" id="pole16">
+                <div></div>
+            </td>
+            <td class="pola" id="pole17">
+                <div>0</div>
+            </td>
+            <td class="pola" id="pole18">
+                <div>,</div>
+            </td>
+            <td class="pola" id="pole19" onclick="zpole19()">
+                <div>=</div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
