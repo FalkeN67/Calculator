@@ -33,7 +33,21 @@ function zpole1() {
 	document.getElementById('wynik_div').innerHTML = ''
 	document.getElementById('nieaktywna_div').innerHTML = ''
 }
+/*Przycisk <- - Funkcja Backspace usuwająca ostatni element tablicy aktywnej_liczby*/
+function zpole2() {
+	let tablica = []
+	let wynik1 = ''
+	for (i = 0; i < aktywna_liczba.length; i++) {
+		tablica.push(aktywna_liczba[i])
+	}
+	tablica.pop()
+	for (i = 0; i < tablica.length; i++) {
+		wynik1 += tablica[i]
+	}
+	aktywna_liczba = wynik1
 
+	document.getElementById('wynik_div').innerHTML = aktywna_liczba
+}
 /*Przycisk / - Funkcja po wynonaniu dzielenia*/
 function zpole3() {
 	nieaktywna_liczba = aktywna_liczba
