@@ -126,7 +126,7 @@ function zpole17() {
 }
 /*Przycisk , - Funkcja dodaje , w aktywnej_liczbie*/
 function zpole18() {
-	aktywna_liczba = aktywna_liczba + ','
+	aktywna_liczba = aktywna_liczba + '.'
 	document.getElementById('wynik_div').innerHTML = aktywna_liczba
 }
 /*Przycik = - Funkcja po kliknięciu równa się*/
