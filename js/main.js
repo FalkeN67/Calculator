@@ -10,8 +10,39 @@ let pole10 = '6'
 let pole12 = '1'
 let pole13 = '2'
 let pole14 = '3'
+let pole17 = '0'
 let operacja = ''
 
+/* Przycisk % - Oblicza procent z liczby [nieaktywne]
+function zpole0() {
+	nieaktywna_liczba = aktywna_liczba
+	aktywna_liczba = ''
+	document.getElementById('wynik_div').innerHTML = aktywna_liczba
+	document.getElementById('nieaktywna_div').innerHTML = nieaktywna_liczba
+	wynik %= parseFloat(nieaktywna_liczba)
+	operacja = 'procentowanie'
+}
+*/
+
+/*Przycisk C - Funkcja czyszcząca po klkinięciu przycisku */
+function zpole1() {
+	nieaktywna_liczba = ''
+	aktywna_liczba = ''
+	wynik = ''
+	operacja = ''
+	document.getElementById('wynik_div').innerHTML = ''
+	document.getElementById('nieaktywna_div').innerHTML = ''
+}
+
+/*Przycisk / - Funkcja po wynonaniu dzielenia*/
+function zpole3() {
+	nieaktywna_liczba = aktywna_liczba
+	aktywna_liczba = ''
+	document.getElementById('wynik_div').innerHTML = aktywna_liczba
+	document.getElementById('nieaktywna_div').innerHTML = nieaktywna_liczba
+	wynik /= parseFloat(nieaktywna_liczba)
+	operacja = 'dzielenie'
+}
 /*Przycisk 7 - Przypisanie aktywnej liczby*/
 function zpole4() {
 	aktywna_liczba += pole4
@@ -89,6 +120,15 @@ function zpole15() {
 	wynik += parseFloat(nieaktywna_liczba)
 	operacja = 'dodawanie'
 }
+function zpole17() {
+	aktywna_liczba += pole17
+	document.getElementById('wynik_div').innerHTML = aktywna_liczba
+}
+/*Przycisk , - Funkcja dodaje , w aktywnej_liczbie*/
+function zpole18() {
+	aktywna_liczba = aktywna_liczba + ','
+	document.getElementById('wynik_div').innerHTML = aktywna_liczba
+}
 /*Przycik = - Funkcja po kliknięciu równa się*/
 function zpole19() {
 	if (operacja == 'dodawanie') {
@@ -103,5 +143,13 @@ function zpole19() {
 		wynik = parseFloat(nieaktywna_liczba) - parseFloat(aktywna_liczba)
 		document.getElementById('wynik_div').innerHTML = wynik
 		aktywna_liczba = wynik
-	}
+	} else if (operacja == 'dzielenie') {
+		wynik = parseFloat(nieaktywna_liczba) / parseFloat(aktywna_liczba)
+		document.getElementById('wynik_div').innerHTML = wynik
+		aktywna_liczba = wynik
+	} /*else if (operacja == 'procentowanie') {
+		wynik = parseFloat(nieaktywna_liczba) % parseFloat(aktywna_liczba)
+		document.getElementById('wynik_div').innerHTML = wynik
+		aktywna_liczba = wynik
+	}*/
 }
